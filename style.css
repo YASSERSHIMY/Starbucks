@@ -1,0 +1,387 @@
+/* Explanation in JS tab */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    box-shadow: none;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    animation-name: fad;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+#container {
+	/* Center the text in the viewport. */
+    pointer-events: none;
+	position: absolute;
+	margin: auto;
+	width: 98%;
+	height: 80pt;
+	top: 0;
+	bottom: 0;
+	color: white;
+	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+	filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 80pt;
+	text-align: center;
+	user-select: none;
+}
+header{
+    height: 80px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.div-logo,
+.nav-links{
+    display: flex;
+}
+.div-logo{
+    flex: 2;
+}
+.div-logo img{
+    margin-top: 30px;
+    height:70px;
+    cursor: pointer;
+}
+header nav{
+    margin-top: 20px;
+    flex: 1;
+    color: white !important;
+}
+.nav-links{
+    justify-content: space-around;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: white !important;
+}
+/* 
+.circle{
+  position: absolute;
+  top: 0;
+  Left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+}
+*/
+main{
+    width:90%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 20px;
+}
+.main-section{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 98%;
+    height: 100%;
+    color: white;
+}
+.div-about{
+    height: fit-content;
+    width: 50%;
+}
+.div-about-device :nth-child(1){
+    width: 98%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.div-inf-device :nth-child(1){
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.div-inf-device :nth-child(2){
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: 500;
+}
+.div-starbucks span{
+    font-weight: 900 !important;
+    color: pink;
+}
+.div-inf-cup{
+    font-weight:400;
+    font-size: 20px;
+}
+.div-btn{
+    display: flex;
+    margin-top: 25px;
+}
+
+.btn{
+    cursor: pointer;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.1764805882;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: 'Poppins', sans-serif;
+    min-width: 28px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: pink;
+    color: white;
+}
+.div-iphone-image{
+    margin-right: 50px;
+    width: 450px;
+}
+.div-iphone-image img{
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 5px 5px black);
+}
+.main-section img :nth-child(1){
+    position: absolute;
+    top: 0px;
+}
+.image-big-circle,
+.image-mid-circle,
+.image-small-circle{
+    position: absolute;
+    z-index: -1;
+}
+.image-big-circle{
+    top:0px;
+    right: 0px;
+    opacity: 0.3;
+    height: 88%;
+}
+.image-mid-circle{
+    top: 400px;
+    right: 650px;
+    opacity: 0.4;
+}
+.image-small-circle{
+    top: 650px;
+    right: 1000px;
+    opacity: 0.5;
+}
+.btn-header{
+    font-weight: 600;   
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+
+.mouse {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: auto;
+    width: 30px;
+    height: 60px;
+    border-radius: 13px;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+.mouse::before {
+    content: "";
+    width: 3px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: scrollDown 1.2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+.mouse__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    animation: fading 1.2s ease;
+    animation-iteration-count: infinite;
+}
+.mouse__arrow:last-child {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 3px solid #fff;
+}
+.mouse__arrow:nth-child(1) {
+    animation-delay: 0s;
+    bottom: -8px;
+}
+.mouse__arrow:nth-child(2) {
+    animation-delay: 0.4s;
+    bottom: -14px;
+}
+.mouse__arrow:nth-child(3) {
+    animation-delay: 0.8s;
+    bottom: -20px;
+}
+
+.copyright{
+    text-align: center;
+    padding-right: 0.05em;
+    color: pink;
+
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  70%, 90% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes fading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media screen and ( max-width:1700px){
+    header nav{
+        flex: 2;
+    }
+    .nav-links{
+        margin-left: 10px;
+    }
+}
+@media screen and ( max-width:1250px){
+    header nav{
+        flex: 4;
+    }
+}
+@media screen and ( max-width:880px){
+    header nav{
+        flex: 6;
+    }
+}
+@media screen and ( max-width:1300px ) {
+    .main-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-section{
+        height: fit-content;
+    }
+    .div-about{
+        width: 90%;
+        margin-top: 50px;
+    }
+    .div-iphone-image{
+        margin-top: 50px;
+        min-height: 40vh;
+        width: 40vh;
+    }
+}
+@media screen and (max-width: 600px){
+    header{
+        width: 100%;
+    }
+    .div-logo{
+        margin-left: 10px;
+    }
+    header nav{
+        flex: 6;   
+    }
+    .nav-links{
+        font-size: 16px;
+    }
+    .div-card{
+        margin-right: 10px;
+    }
+    main{
+        width: 100%;
+    }
+    .div-about{
+        width: 90%;
+        height: fit-content;
+    }
+    .div-about-device img{
+        width: 100%;
+    }
+    .div-iphone-image img{
+        width:100%;
+    }
+    .copyright{
+        margin-top: 140px;
+    }
+    .image-big-circle,.image-mid-circle,.image-small-circle{
+        display: none;
+    }
+}
+@media screen and ( max-width:500px){
+    header{
+        width: 95%;
+    }
+    .div-logo img{
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    header nav{
+        flex: 6;
+    }
+    .nav-links{
+        font-size: 12px;
+        
+    }
+}
+
+
+
+

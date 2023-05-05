@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css"><body>
+</head>
+<body>
+    <header>
+        <div class="div-logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class=" btn-header">Store</a></li>
+                <li><a class=" btn-header">Products</a></li>
+                <li><a class=" btn-header">Support</a></li>
+                <li><a class="btn-header">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="div-about">
+                <div class="div-about-device">
+                    <div class="div-inf-device">
+                        <h4 class="div-starbucks">it's not just Coffe,<br>
+                            it's <span>Starbucks</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="div-inf-cup">
+                    <p>
+                        " Savor the rich, complex flavors of our expertly crafted, sustainably sourced coffee, made just for you by our skilled baristas and available at thousands of convenient locations worldwide, with a rewards program that makes your coffee experience even more enjoyable."
+                    </p>
+                </div>
+                <div class="div-btn">
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+            <div class="div-iphone-image">
+                <img src="images/4.png" alt="">
+            </div>
+        </section>
+        <div class="mouse">
+            <div class="mouse__arrow"></div>
+            <div class="mouse__arrow"></div>
+            <div class="mouse__arrow"></div>
+          </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <div id="container">
+	    <span id="text1"></span>
+	    <span id="text2"></span>
+    </div>
+
+    <svg id="filters">
+	    <defs>
+		    <filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		    </filter>
+	    </defs>
+    </svg>
+<script src=""></script>
+</body>
+</html>
